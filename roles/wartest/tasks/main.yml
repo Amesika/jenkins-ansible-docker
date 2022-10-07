@@ -9,7 +9,7 @@
       - docker
       - docker-compose
 
-- name: run container
+- name: run container busybox
   docker_container:
     name: mydata
     image: busybox
