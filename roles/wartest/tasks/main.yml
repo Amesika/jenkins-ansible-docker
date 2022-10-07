@@ -6,6 +6,7 @@
 - name: pip install docker-py
   pip:
     name:
+      - pyrsistent
       - docker
       - docker-compose
 
