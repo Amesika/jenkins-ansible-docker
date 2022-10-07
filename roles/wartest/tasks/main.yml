@@ -10,9 +10,17 @@
       - docker-compose
 
 - name: run container
-  docker_container:
-    name: warest
-    image: amesika/compwar:version-11
-    ports: 8081:8080
-    state: started
- 
+  community.docker.docker_compose:
+    project_src: web
+    state: absent
+    
+- name: run container 2
+  community.docker.docker_compose:
+    project_name: web
+        definition:
+          version: '3'
+          services:
+            web:
+              image: amesika/compwar:version-11
+              ports:
+                - "8081:8080"
