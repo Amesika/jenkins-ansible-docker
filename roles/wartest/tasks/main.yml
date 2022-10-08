@@ -8,7 +8,12 @@
     name:
       - docker
       - docker-compose
-    become: True
+      
+ - name: Bash docker
+   shell: docker --version
+   
+ - name: Bash docker-compose
+   shell: docker-compose --version
 
 - name: run container busybox
   docker_container:
