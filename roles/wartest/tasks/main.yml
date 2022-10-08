@@ -8,6 +8,7 @@
     name:
       - docker
       - docker-compose
+    become: True
 
 - name: run container busybox
   docker_container:
